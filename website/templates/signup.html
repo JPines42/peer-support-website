@@ -2,48 +2,62 @@
 {% block title %} Sign Up {% endblock %}
 {% block content %}
 
-<h1>SIGN UP</h1>
+</br>
+<header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-dark font-weight-bold headingsfont">Sign Up</h1>
+                <hr class="divider" />
+            </div>
+        </div>
+    </div>
+</header>
 
 <form method="POST">
 
+<!--Email input box-->
 <div class="form-group">
-    <label for="email">Email Address</label>
+    <label for="email" class="headingsfont">Email Address</label>
     <input
     type="email"
     class="form-control"
     id="email"
     name="email"
-    placeholder="Enter email"
+    placeholder="Enter email (Must be greater than 3 characters)"
     />
 </div>
 <br/>
 
+<!--First name input box-->
 <div class="form-group">
-    <label for="firstName">First Name</label>
+    <label for="firstName" class="headingsfont">First Name</label>
     <input
     type="text"
     class="form-control"
     id="firstName"
     name="firstName"
-    placeholder="Enter your first name"
+    placeholder="Enter your first name (Must be greater than 1 character)"
     />
 </div>
 <br/>
 
+<!--Password input box-->
 <div class="form-group">
-    <label for="password1">Password</label>
+    <label for="password1" class="headingsfont">Password</label>
     <input
     type="password"
     class="form-control"
     id="password1"
     name="password1"
-    placeholder="Enter password"
+    placeholder="Enter password (Must be greater than 7 characters)"
     />
 </div>
 <br/>
 
+<!--Confirm password input box-->
 <div class="form-group">
-    <label for="password2">Confirm Password</label>
+    <label for="password2" class="headingsfont">Confirm Password</label>
     <input
     type="password"
     class="form-control"
@@ -54,7 +68,8 @@
 </div>
 <br/>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<!--Submit button-->
+<button type="submit" class="btn btn-primary buttoncolour headingsfont">Submit</button>
 <br/>
 <br/>
 

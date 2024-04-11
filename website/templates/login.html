@@ -2,12 +2,25 @@
 {% block title %} Login {% endblock %}
 {% block content %}
 
-<h1>LOGIN</h1>
+<!--Use user@blog.com & 12345678 to login-->
+
+</br>
+<header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-dark font-weight-bold headingsfont">Login</h1>
+                <hr class="divider" />
+            </div>
+        </div>
+    </div>
+</header>
 
 <form method="POST">
 
+<!--Email input box-->
 <div class="form-group">
-    <label for="email">Email Address</label>
+    <label for="email" class="headingsfont">Email Address</label>
     <input
     type="email"
     class="form-control"
@@ -18,8 +31,9 @@
 </div>
 <br/>
 
+<!--Password input box-->
 <div class="form-group">
-    <label for="password">Password</label>
+    <label for="password" class="headingsfont">Password</label>
     <input
     type="password"
     class="form-control"
@@ -30,7 +44,8 @@
 </div>
 <br/>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<!--Submit button-->
+<button type="submit" class="btn btn-primary buttoncolour headingsfont">Submit</button>
 <br/>
 <br/>
 

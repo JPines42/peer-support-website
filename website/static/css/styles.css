@@ -1,0 +1,29 @@
+.navcolour {
+    background-color: #DB2955;
+}
+
+.headercolour {
+    background-color: #DB2955;
+    border-radius: 20px;
+}
+
+.headingsfont {
+    margin-top: 0;
+    font-family: "Merriweather Sans", "Segoe UI";
+    font-weight: 500;
+    line-height: 1;
+  }
+
+.headerpcolour {
+    color: white;
+}
+
+.buttoncolour {
+    border-color: #DB2955;
+    background-color: #DB2955;
+}
+
+.buttoncolour:hover { /* FIND OUT HOW TO MAKE IT A DIFFERENT COLOUR WHEN CLICKING ON IT */
+    background-color: #AC042E;
+    border-color: #AC042E;
+}
