@@ -21,9 +21,24 @@
 .buttoncolour {
     border-color: #DB2955;
     background-color: #DB2955;
+    padding: 10px;
 }
 
 .buttoncolour:hover { /* FIND OUT HOW TO MAKE IT A DIFFERENT COLOUR WHEN CLICKING ON IT */
     background-color: #AC042E;
     border-color: #AC042E;
 }
+
+.team-member {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .team-member img {
+    width: 14rem;
+    height: 14rem;
+    border: 0.3rem solid #DB2955;
+  }
+  .team-member h4, .team-member .h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
