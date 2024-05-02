@@ -44,33 +44,7 @@
           {% endif %}
         </div>
       </nav>
-
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="/home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/notes">Notes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
-            </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/signup">Sign Up</a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    </nav>
+      
       <!--Flashes-->
       {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %} 
@@ -91,7 +65,7 @@
       {% endif %} {% endfor %} {% endif %} {% endwith %}
 
     <!--Main content block-->
-    <div class="container">
+    <div>
       {% block content %}
       {% endblock %}
     </div>

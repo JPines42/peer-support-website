@@ -24,7 +24,7 @@
     padding: 10px;
 }
 
-.buttoncolour:hover { /* FIND OUT HOW TO MAKE IT A DIFFERENT COLOUR WHEN CLICKING ON IT */
+.buttoncolour:hover {
     background-color: #AC042E;
     border-color: #AC042E;
 }
@@ -32,13 +32,21 @@
 .team-member {
     margin-bottom: 3rem;
     text-align: center;
-  }
-  .team-member img {
-    width: 14rem;
-    height: 14rem;
-    border: 0.3rem solid #DB2955;
-  }
-  .team-member h4, .team-member .h4 {
-    margin-top: 1.5rem;
-    margin-bottom: 0;
-  }
+}
+
+.team-member img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.3rem solid #DB2955;
+}
+
+.homemasthead {
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url("../assets/img/temp.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    margin-top: -20px;
+}
