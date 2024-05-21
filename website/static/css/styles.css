@@ -40,13 +40,48 @@
   border: 0.3rem solid #DB2955;
 }
 
-.homemasthead {
-    text-align: center;
+.homeheader {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
                        rgba(0, 0, 0, 0.5)), url("../assets/img/temp.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    margin-top: -20px;
+    padding-top: 3rem;
 }
+
+.noteborder {
+    border-color: #DB2955;
+    border-width: 2px;
+}
+
+.stuck {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navspace {
+    padding-top: 3rem;
+}
+
+.flashspace {
+    padding-top: 4.5rem;
+    position:fixed;
+    width: 25%;
+    z-index: 5;
+    right: 0%;
+}
+
+.flexit {
+    flex: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }

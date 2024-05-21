@@ -3,8 +3,9 @@
 {% block content %}
 
 </br>
-<header class="masthead">
-    <div class="container-fluid px-4 px-lg-5 h-100">
+
+<section>
+    <div class="container px-4 px-lg-5 h-100 navspace">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-8 align-self-end">
                 <h1 class="text-dark font-weight-bold headingsfont">Sign Up</h1>
@@ -12,68 +13,70 @@
             </div>
         </div>
     </div>
-</header>
+</section>
 
-<div class="container">
-<form method="POST">
+<section class="container">
+    <form method="POST">
 
-<!--Email input box-->
-<div class="form-group">
-    <label for="email" class="headingsfont">Email Address</label>
-    <input
-    type="email"
-    class="form-control"
-    id="email"
-    name="email"
-    placeholder="Enter email (Must be greater than 3 characters)"
-    />
+        <div class="form-group">
+            <label for="email" class="headingsfont">Email Address</label>
+            <input
+            type="email"
+            class="form-control noteborder"
+            id="email"
+            name="email"
+            placeholder="Enter email (Must be greater than 3 characters)"
+            />
+        </div>
+
+<br/>
+
+        <div class="form-group">
+            <label for="firstName" class="headingsfont">Username</label>
+            <input
+            type="text"
+            class="form-control noteborder"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your username (Must be greater than 1 character)"
+            />
+        </div>
+
+<br/>
+
+        <div class="form-group">
+            <label for="password1" class="headingsfont">Password</label>
+            <input
+            type="password"
+            class="form-control noteborder"
+            id="password1"
+            name="password1"
+            placeholder="Enter password (Must be greater than 7 characters)"
+            />
+        </div>
+
+<br/>
+
+        <div class="form-group">
+        <label for="password2" class="headingsfont">Confirm Password</label>
+        <input
+        type="password"
+        class="form-control noteborder"
+        id="password2"
+        name="password2"
+        placeholder="Re-enter Password"
+            />
+        </div>
+
+<br/>
+
+<div align="center">
+    <button type="submit" class="btn btn-primary buttoncolour headingsfont">Sign Up</button>
 </div>
-<br/>
 
-<!--First name input box-->
-<div class="form-group">
-    <label for="firstName" class="headingsfont">First Name</label>
-    <input
-    type="text"
-    class="form-control"
-    id="firstName"
-    name="firstName"
-    placeholder="Enter your first name (Must be greater than 1 character)"
-    />
-</div>
-<br/>
-
-<!--Password input box-->
-<div class="form-group">
-    <label for="password1" class="headingsfont">Password</label>
-    <input
-    type="password"
-    class="form-control"
-    id="password1"
-    name="password1"
-    placeholder="Enter password (Must be greater than 7 characters)"
-    />
-</div>
-<br/>
-
-<!--Confirm password input box-->
-<div class="form-group">
-    <label for="password2" class="headingsfont">Confirm Password</label>
-    <input
-    type="password"
-    class="form-control"
-    id="password2"
-    name="password2"
-    placeholder="Re-enter Password"
-    />
-</div>
-<br/>
-
-<!--Submit button-->
-<button type="submit" class="btn btn-primary buttoncolour headingsfont">Submit</button>
 <br/>
 <br/>
 
-</form>
-</div>
+    </form>
+</section>
 {% endblock %}
