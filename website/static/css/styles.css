@@ -1,5 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Segoe UI";
+  }
+
+.spacer {
+    padding: 1rem;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-item {
+    color: black;
+    margin-top: 0;
+    font-family:"Merriweather Sans", "Segoe UI";
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.6rem;
+}
+
+@media (max-width: 769px){
+    .splitter {
+     font-size: 0px
+    }
+ }
+
 .navcolour {
     background-color: #DB2955;
+}
+
+.titlefont {
+    font-family: "Allura";
+    color: white;
+    font-size: 4rem;
 }
 
 .headercolour {
@@ -29,33 +68,7 @@
     border-color: #AC042E;
 }
 
-.team-member {
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.team-member img {
-  width: 14rem;
-  height: 14rem;
-  border: 0.3rem solid #DB2955;
-}
-
-.homeheader {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-                       rgba(0, 0, 0, 0.5)), url("../assets/img/temp.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    padding-top: 3rem;
-}
-
-.noteborder {
-    border-color: #DB2955;
-    border-width: 2px;
-}
-
-.stuck {
+.stickbars {
     position: fixed;
     top: 0;
     width: 100%;
@@ -63,8 +76,10 @@
 }
 
 .navspace {
-    padding-top: 3rem;
+    padding-top: 5rem;
 }
+
+
 
 .flashspace {
     padding-top: 4.5rem;
@@ -78,10 +93,28 @@
     flex: 1;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+.noteborder {
+    border-color: #DB2955;
+    border-width: 2px;
+}
+
+.homeheader {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../assets/img/banner.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 5rem;
+}
+
+.homeimgcircle {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.homeimgcircle img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.3rem solid #DB2955;
+}
+

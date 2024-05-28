@@ -2,8 +2,6 @@
 {% block title %} Sign Up {% endblock %}
 {% block content %}
 
-</br>
-
 <section>
     <div class="container px-4 px-lg-5 h-100 navspace">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -16,67 +14,79 @@
 </section>
 
 <section class="container">
-    <form method="POST">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
 
-        <div class="form-group">
-            <label for="email" class="headingsfont">Email Address</label>
-            <input
-            type="email"
-            class="form-control noteborder"
-            id="email"
-            name="email"
-            placeholder="Enter email (Must be greater than 3 characters)"
-            />
+            <div class="form-group">
+                {{ form.username.label(class="headingsfont form-control-label") }}
+
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control noteborder", placeholder="Enter username (must be greater than 1 character)") }}
+            {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label(class="headingsfont form-control-label") }}
+
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control noteborder", placeholder="Enter email") }}
+            {% endif %}
+            </div>
+        
+            <div class="form-group">
+                {{ form.password.label(class="headingsfont form-control-label") }}
+
+                {% if form.password.errors %}
+                    {{ form.password(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class="form-control noteborder", placeholder="Enter password (Must be greater than 7 characters)") }}
+            {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.confirm_password.label(class="headingsfont form-control-label") }}
+
+                {% if form.confirm_password.errors %}
+                    {{ form.confirm_password(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.confirm_password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }}
+            {% endif %}
+            </div>
+        </fieldset>
+        <div align="center" class="form-group">
+            {{ form.submit(class="btn btn-primary buttoncolour headingsfont") }}
         </div>
-
-<br/>
-
-        <div class="form-group">
-            <label for="firstName" class="headingsfont">Username</label>
-            <input
-            type="text"
-            class="form-control noteborder"
-            id="firstName"
-            name="firstName"
-            placeholder="Enter your username (Must be greater than 1 character)"
-            />
-        </div>
-
-<br/>
-
-        <div class="form-group">
-            <label for="password1" class="headingsfont">Password</label>
-            <input
-            type="password"
-            class="form-control noteborder"
-            id="password1"
-            name="password1"
-            placeholder="Enter password (Must be greater than 7 characters)"
-            />
-        </div>
-
-<br/>
-
-        <div class="form-group">
-        <label for="password2" class="headingsfont">Confirm Password</label>
-        <input
-        type="password"
-        class="form-control noteborder"
-        id="password2"
-        name="password2"
-        placeholder="Re-enter Password"
-            />
-        </div>
-
-<br/>
-
-<div align="center">
-    <button type="submit" class="btn btn-primary buttoncolour headingsfont">Sign Up</button>
-</div>
-
-<br/>
-<br/>
-
     </form>
+
+    <hr class="divider" />
+        <small class="text-muted">
+            Already have an account?<a class="ml-2" href="{{ url_for('auth.login') }}">Sign in</a>
+        </small>
+
 </section>
 {% endblock %}
