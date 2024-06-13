@@ -1,5 +1,5 @@
 {% extends "template.html" %}
-{% block title %} Notes {% endblock %}
+{% block title %} Notes | Peer Support SMC {% endblock %}
 {% block content %} 
 
 <section>
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-<br/>
+    <div class="spacer"></div>
 
         {% endfor %}
     </ul> 
@@ -35,16 +35,16 @@
         <form method="POST">
             <textarea name="note" id="note" class="form-control noteborder"></textarea>
 
-<br/>
+            <div class="spacer"></div>
 
             <div align="center">
-                <button type="submit" class="btn btn-primary buttoncolour headingsfont">Add Note</button>
+                <button type="submit" class="btn btn-primary btn-lg buttoncolour headingsfont">Add Note</button>
             </div>
         </form>
     </div>
 
 </section>
 
-<br/>
+<div class="spacer"></div>
 
 {% endblock %}

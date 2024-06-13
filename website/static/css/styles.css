@@ -79,8 +79,6 @@ body {
     padding-top: 5rem;
 }
 
-
-
 .flashspace {
     padding-top: 4.5rem;
     position:fixed;
@@ -131,4 +129,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    border-color: #DB2955;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.tablecenter {
+    text-align: center;
+}
+
+table { 
+    table-layout:fixed;
+}
+
+td { 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;
+}
+
+.tabletoppad {
+    padding-top: 10px;
 }

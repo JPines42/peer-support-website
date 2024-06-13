@@ -39,5 +39,13 @@ def delete_note():
     return jsonify({})
 
 @views.route("/singdanceoff")
-def testpage():
+def singdanceoff():
     return render_template("singdanceoff.html", user=current_user)
+
+@views.route("/leaders")
+def leaders():
+    return render_template("leaders.html", user=current_user)
+
+@views.route("/test")
+def testpage():
+    return render_template("testpage.html", user=current_user)
