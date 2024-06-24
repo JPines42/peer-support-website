@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
-from .models import Note
+from .models import Note, Faq
 from  . import db
 import json
 
@@ -10,6 +10,29 @@ views = Blueprint("views", __name__)
 @views.route("/home")
 def home():
     return render_template("home.html", user=current_user)
+
+@views.route("/singdanceoff")
+def singdanceoff():
+    return render_template("singdanceoff.html", user=current_user)
+
+@views.route("/leaders")
+def leaders():
+    return render_template("leaders.html", user=current_user)
+
+@views.route("/faq", methods=['GET', 'POST'])
+def faq():
+    if request.method == 'POST':
+        faq = request.form.get('faq')
+        email = request.form.get('email')
+        if len(faq) < 1:
+            flash('Question is too short!', category='error')
+        else:
+            new_faq = Faq(data=faq, email=email)
+            db.session.add(new_faq)
+            db.session.commit()
+            flash('Question submitted!', category='success')
+        
+    return render_template("faq.html", user=current_user)
 
 @views.route("/notes", methods=['GET', 'POST'])
 @login_required
@@ -37,15 +60,3 @@ def delete_note():
             db.session.commit()
             flash('Note deleted!', category='success')
     return jsonify({})
-
-@views.route("/singdanceoff")
-def singdanceoff():
-    return render_template("singdanceoff.html", user=current_user)
-
-@views.route("/leaders")
-def leaders():
-    return render_template("leaders.html", user=current_user)
-
-@views.route("/test")
-def testpage():
-    return render_template("testpage.html", user=current_user)

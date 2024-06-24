@@ -151,3 +151,8 @@ td {
 .tabletoppad {
     padding-top: 10px;
 }
+
+.sizedown {
+    height: 1.75rem;
+    width: 1.75rem;
+}
