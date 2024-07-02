@@ -25,12 +25,12 @@ def faq():
         faq = request.form.get('faq')
         email = request.form.get('email')
         if len(faq) < 1:
-            flash('Question is too short!', category='error')
+            flash('Message is too short!', category='error')
         else:
             new_faq = Faq(data=faq, email=email)
             db.session.add(new_faq)
             db.session.commit()
-            flash('Question submitted!', category='success')
+            flash('Message submitted!', category='success')
         
     return render_template("faq.html", user=current_user)
 
@@ -60,3 +60,7 @@ def delete_note():
             db.session.commit()
             flash('Note deleted!', category='success')
     return jsonify({})
+
+@views.route("/calendar")
+def calendar():
+    return render_template("calendar.html", user=current_user)

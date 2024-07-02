@@ -5,6 +5,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Segoe UI";
+    /*
+    background-image: url("../assets/img/tiles.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; 
+    */
   }
 
 .spacer {
@@ -38,7 +45,7 @@ body {
 .titlefont {
     font-family: "Allura";
     color: white;
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 .headercolour {
@@ -134,12 +141,13 @@ body {
     border-radius: 10px;
 }
 
-.tablecenter {
+.buttoncenter {
     text-align: center;
 }
 
 table { 
     table-layout:fixed;
+    text-align: center;
 }
 
 td { 
@@ -155,4 +163,25 @@ td {
 .sizedown {
     height: 1.75rem;
     width: 1.75rem;
+}
+
+.calendarhead {
+    background-color: #DB2955;
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
+
+.calendargray {
+    color: #D4D4D4;
+}
+
+.calendartoday {
+    background: #DB2955;
+    color: white;
+    font-weight: bold;
+  }
+
+.listcenter {
+    list-style-position: inside;
 }
