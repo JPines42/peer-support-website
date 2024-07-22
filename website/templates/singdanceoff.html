@@ -1,5 +1,5 @@
 {% extends "template.html" %}
-{% block title %} Sing & Dance Off | Peer Support SMC{% endblock %}
+{% block title %} Sing & Dance Off • Peer Support SMC{% endblock %}
 {% block content %}
 
 <section>
@@ -49,5 +49,14 @@
 </section>
 
 <div class="spacer"></div>
+
+<script>
+    var activeNavItem = $('.nav-item');
+
+    activeNavItem.click(function(){
+      activeNavItem.removeClass('active');
+      $("#link-sdo").addClass('active');  
+    });
+  </script>
 
 {% endblock %}

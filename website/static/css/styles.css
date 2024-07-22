@@ -5,31 +5,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Segoe UI";
-    /*
     background-image: url("../assets/img/tiles.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     background-size: cover; 
-    */
   }
 
 .spacer {
     padding: 1rem;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-}
-
-.dropdown-item {
-    color: black;
-    margin-top: 0;
-    font-family:"Merriweather Sans", "Segoe UI";
-    font-weight: 500;
-    line-height: 1;
-    padding: 0.6rem;
 }
 
 @media (max-width: 769px){
@@ -42,6 +26,27 @@ body {
     background-color: #DB2955;
 }
 
+a:not(.dropdown-item) { 
+    color: white; 
+} 
+
+a:not(.dropdown-item):hover { 
+    color: #D4D4D4; 
+} 
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-item {
+    margin-top: 0;
+    font-family:"Merriweather Sans", "Segoe UI";
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.6rem;
+}
+
 .titlefont {
     font-family: "Allura";
     color: white;
@@ -51,6 +56,10 @@ body {
 .headercolour {
     background-color: #DB2955;
     border-radius: 20px;
+}
+
+.navlinkcolour {
+    color: white;
 }
 
 .headingsfont {
@@ -89,9 +98,13 @@ body {
 .flashspace {
     padding-top: 4.5rem;
     position:fixed;
-    width: 25%;
+    width: 45%;
     z-index: 5;
     right: 0%;
+}
+
+.flashfont {
+    font-weight: bold;
 }
 
 .flexit {
@@ -104,7 +117,7 @@ body {
 }
 
 .homeheader {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../assets/img/temp.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../assets/img/banner.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -161,8 +174,8 @@ td {
 }
 
 .sizedown {
-    height: 1.75rem;
-    width: 1.75rem;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .calendarhead {
@@ -184,4 +197,8 @@ td {
 
 .listcenter {
     list-style-position: inside;
+}
+
+.right {
+    float: right;
 }

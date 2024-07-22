@@ -1,5 +1,5 @@
 {% extends "template.html" %}
-{% block title %} FAQ | Peer Support SMC{% endblock %}
+{% block title %} FAQ • Peer Support SMC{% endblock %}
 {% block content %}
 
 <section>
@@ -14,32 +14,34 @@
     </div>
 </section>
 
+
+
 <div class="spacer"></div>
 
 <section class="container">
     <div class="row">
       <div class="col-md-6 col-lg-4 mb-4">
-        <h4 class="mb-3"><img src="static/assets/img/temp.jpg" class="sizedown"> Question 1</h4>
+        <h4 class="mb-3"><img src="static/assets/img/calendar.jpg" class="sizedown"> Question 1</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eros velit, efficitur sit amet urna in, fermentum accumsan neque.</p>
       </div>
       <div class="col-md-6 col-lg-4 mb-4">
-        <h4 class="mb-3"><img src="static/assets/img/temp.jpg" class="sizedown"> Question 2</h4>
+        <h4 class="mb-3"><img src="static/assets/img/globe.jpg" class="sizedown"> Question 2</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eros velit, efficitur sit amet urna in, fermentum accumsan neque.</p>
       </div>
       <div class="col-md-6 col-lg-4 mb-4">
-        <h4 class="mb-3"><img src="static/assets/img/temp.jpg" class="sizedown"> Question 3</h4>
+        <h4 class="mb-3"><img src="static/assets/img/hand.jpg" class="sizedown"> Question 3</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eros velit, efficitur sit amet urna in, fermentum accumsan neque.</p>
       </div>
       <div class="col-md-6 col-lg-4 mb-4">
-        <h4 class="mb-3"><img src="static/assets/img/temp.jpg" class="sizedown"> Question 4</h4>
+        <h4 class="mb-3"><img src="static/assets/img/heart.jpg" class="sizedown"> Question 4</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eros velit, efficitur sit amet urna in, fermentum accumsan neque.</p>
       </div>
       <div class="col-md-6 col-lg-4 mb-4">
-        <h4 class="mb-3"><img src="static/assets/img/temp.jpg" class="sizedown"> Question 5</h4>
+        <h4 class="mb-3"><img src="static/assets/img/music.jpg" class="sizedown"> Question 5</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eros velit, efficitur sit amet urna in, fermentum accumsan neque.</p>
       </div>
       <div class="col-md-6 col-lg-4 mb-4">
-        <h4 class="mb-3"><img src="static/assets/img/temp.jpg" class="sizedown"> Question 6</h4>
+        <h4 class="mb-3"><img src="static/assets/img/pen.jpg" class="sizedown"> Question 6</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eros velit, efficitur sit amet urna in, fermentum accumsan neque.</p>
       </div>
 </section>
@@ -72,4 +74,13 @@
         </form>
 </section>
 <div class="spacer"></div>
+
+<script>
+  var activeNavItem = $('.nav-item');
+
+  activeNavItem.click(function(){
+    activeNavItem.removeClass('active');
+    $("#link-faq").addClass('active');  
+  });
+</script>
 {% endblock %}
