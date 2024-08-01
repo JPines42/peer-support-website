@@ -1,35 +1,23 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
 from .models import Note, Faq
-from . import db
+from  . import db
 import json
 
 views = Blueprint("views", __name__)
-
-# Home page route
-
 
 @views.route("/")
 @views.route("/home")
 def home():
     return render_template("home.html", user=current_user)
 
-# Sing and Dance off page route
-
-
 @views.route("/singdanceoff")
 def singdanceoff():
     return render_template("singdanceoff.html", user=current_user)
 
-# Meet the Leaders page route
-
-
 @views.route("/leaders")
 def leaders():
     return render_template("leaders.html", user=current_user)
-
-# FAQ page route
-
 
 @views.route("/faq", methods=['GET', 'POST'])
 def faq():
@@ -37,18 +25,14 @@ def faq():
         faq = request.form.get('faq')
         email = request.form.get('email')
         if len(faq) < 1:
-            # If message is less than 1 character, don't sumbit
             flash('Message is too short!', category='error')
         else:
             new_faq = Faq(data=faq, email=email)
             db.session.add(new_faq)
             db.session.commit()
-            flash('Message submitted!', category='success')  # Submit question
-
+            flash('Message submitted!', category='success')
+        
     return render_template("faq.html", user=current_user)
-
-# Notes page route
-
 
 @views.route("/notes", methods=['GET', 'POST'])
 @login_required
@@ -56,18 +40,14 @@ def notes():
     if request.method == 'POST':
         note = request.form.get('note')
         if len(note) < 1:
-            # If note is less than 1 character, don't sumbit
             flash('Note is too short!', category='error')
         else:
             new_note = Note(data=note, user_id=current_user.id)
             db.session.add(new_note)
             db.session.commit()
-            flash('Note added!', category='success')  # Submit note
-
+            flash('Note added!', category='success')
+        
     return render_template("notes.html", user=current_user)
-
-# Note deletion
-
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
@@ -80,9 +60,6 @@ def delete_note():
             db.session.commit()
             flash('Note deleted!', category='success')
     return jsonify({})
-
-# Calendar page route
-
 
 @views.route("/calendar")
 @login_required

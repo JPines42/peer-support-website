@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Segoe UI";
-    background-image: url("../assets/img/tiles.jpg");
+    background-image: url("../assets/img/tiles.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;

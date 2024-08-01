@@ -2,7 +2,6 @@
 {% block title %} Sing & Dance Off • Peer Support SMC{% endblock %}
 {% block content %}
 
-<!--Heading-->
 <section>
     <div class="container px-4 px-lg-5 h-100 navspace">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -15,7 +14,6 @@
     </div>
 </section>
 
-<!--Videos-->
 <section class="container">
     <h2 class="text-center mt-0 headingsfont">Previous Year's Competitions</h2>
     <hr class="divider" />
@@ -37,7 +35,6 @@
 
 <div class="spacer"></div>
 
-<!--Main Paragraph-->
 <section class="page-section headercolour container">
     <div class="spacer"></div>
     <div class="container px-4 px-lg-5">
@@ -52,5 +49,14 @@
 </section>
 
 <div class="spacer"></div>
+
+<script>
+    var activeNavItem = $('.nav-item');
+
+    activeNavItem.click(function(){
+      activeNavItem.removeClass('active');
+      $("#link-sdo").addClass('active');  
+    });
+  </script>
 
 {% endblock %}
