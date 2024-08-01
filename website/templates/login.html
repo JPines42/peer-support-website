@@ -1,12 +1,14 @@
 {% extends "template.html" %}
 {% block title %} Login • Peer Support SMC {% endblock %}
 {% block content %}
+
 <!--
 TEST USER
 Email: test@blog.com
 Password: 12345678
 -->
 
+<!--Heading-->
 <section>
     <div class="container px-4 px-lg-5 h-100 navspace">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -18,6 +20,7 @@ Password: 12345678
     </div>
 </section>
 
+<!--Email adress input box-->
 <section class="container">
     <form method="POST">
         <div class="form-group">
@@ -33,6 +36,7 @@ Password: 12345678
 
         <div class="spacer"></div>
 
+<!--Password input box-->
         <div class="form-group">
             <label for="password" class="headingsfont">Password</label>
             <input
@@ -46,6 +50,7 @@ Password: 12345678
 
 <div class="spacer"></div>
 
+<!--Submit button-->
 <div align="center">
     <button type="submit" class="btn btn-primary btn-lg buttoncolour headingsfont">Login</button>
 </div>
