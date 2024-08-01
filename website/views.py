@@ -62,6 +62,5 @@ def delete_note():
     return jsonify({})
 
 @views.route("/calendar")
-@login_required
 def calendar():
     return render_template("calendar.html", user=current_user)
