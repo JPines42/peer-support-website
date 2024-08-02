@@ -22,60 +22,60 @@
                 {{ form.username.label(class="headingsfont form-control-label") }}
 
                 {% if form.username.errors %}
-                    {{ form.username(class="form-control is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.username.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
+                {{ form.username(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
                 {% else %}
-                    {{ form.username(class="form-control noteborder", placeholder="Enter username (Must be greater than 1 character)") }}
-            {% endif %}
+                {{ form.username(class="form-control noteborder", placeholder="Enter username (Must be greater than 1 character)") }}
+                {% endif %}
             </div>
 
             <div class="form-group">
                 {{ form.email.label(class="headingsfont form-control-label") }}
 
                 {% if form.email.errors %}
-                    {{ form.email(class="form-control is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.email.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
+                {{ form.email(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
                 {% else %}
-                    {{ form.email(class="form-control noteborder", placeholder="Enter email") }}
-            {% endif %}
+                {{ form.email(class="form-control noteborder", placeholder="Enter email") }}
+                {% endif %}
             </div>
-        
+
             <div class="form-group">
                 {{ form.password.label(class="headingsfont form-control-label") }}
 
                 {% if form.password.errors %}
-                    {{ form.password(class="form-control is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.password.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
+                {{ form.password(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
                 {% else %}
-                    {{ form.password(class="form-control noteborder", placeholder="Enter password (Must be greater than 7 characters)") }}
-            {% endif %}
+                {{ form.password(class="form-control noteborder", placeholder="Enter password (Must be greater than 7 characters)") }}
+                {% endif %}
             </div>
 
             <div class="form-group">
                 {{ form.confirm_password.label(class="headingsfont form-control-label") }}
 
                 {% if form.confirm_password.errors %}
-                    {{ form.confirm_password(class="form-control is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.confirm_password.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
+                {{ form.confirm_password(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.confirm_password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
                 {% else %}
-                    {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }}
-            {% endif %}
+                {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }}
+                {% endif %}
             </div>
         </fieldset>
         <div align="center" class="form-group">
@@ -84,9 +84,9 @@
     </form>
 
     <hr class="divider" />
-        <small class="text-muted">
-            Already have an account?<a class="ml-2" href="{{ url_for('auth.login') }}">Sign in</a>
-        </small>
+    <small class="text-muted">
+        Already have an account?<a class="ml-2" href="{{ url_for('auth.login') }}">Sign in</a>
+    </small>
 
 </section>
 {% endblock %}

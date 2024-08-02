@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 {% block title %} Notes • Peer Support SMC {% endblock %}
-{% block content %} 
+{% block content %}
 
 <section>
     <div class="container px-4 px-lg-5 h-100 navspace">
@@ -17,19 +17,19 @@
 <section class="container">
     <ul class="list-group list-group-flush" id="notes">
         {% for note in user.notes %}
-            <div class="card noteborder">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="card-text">{{ note.data }}</div>
-                    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+        <div class="card noteborder">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="card-text">{{ note.data }}</div>
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+        </div>
 
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
         {% endfor %}
-    </ul> 
+    </ul>
 
     <div>
         <form method="POST">
