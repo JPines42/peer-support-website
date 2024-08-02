@@ -1,3 +1,4 @@
+/*Frame scaling and background*/
 body {
     margin: 0;
     padding: 0;
@@ -12,10 +13,12 @@ body {
     background-size: cover;
 }
 
+/*Makes gaps between sections*/
 .spacer {
     padding: 1rem;
 }
 
+/*Navigation bar*/
 .navcolour {
     background-color: #DB2955;
 }
@@ -50,6 +53,7 @@ a:not(.dropdown-item):hover {
     background-size: cover;
 }
 
+/*Text*/
 .titlefont {
     font-family: "Allura";
     color: white;
@@ -76,6 +80,7 @@ a:not(.dropdown-item):hover {
     color: white;
 }
 
+/*Buttons*/
 .buttoncolour {
     border-color: #DB2955;
     background-color: #DB2955;
@@ -98,6 +103,7 @@ a:not(.dropdown-item):hover {
     padding-top: 5rem;
 }
 
+/*Flashes*/
 .flashspace {
     padding-top: 4.5rem;
     position: fixed;
@@ -114,11 +120,13 @@ a:not(.dropdown-item):hover {
     flex: 1;
 }
 
+/*Notes*/
 .noteborder {
     border-color: #DB2955;
     border-width: 2px;
 }
 
+/*Home heading banner*/
 .homeheader {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/banner.jpg");
     background-repeat: no-repeat;
@@ -128,6 +136,7 @@ a:not(.dropdown-item):hover {
     padding-top: 6rem;
 }
 
+/*Home bubbles*/
 .homeimgcircle {
     margin-bottom: 3rem;
     text-align: center;
@@ -139,6 +148,7 @@ a:not(.dropdown-item):hover {
     border: 0.3rem solid #DB2955;
 }
 
+/*Sing and dance off videos*/
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -161,6 +171,7 @@ a:not(.dropdown-item):hover {
     text-align: center;
 }
 
+/*Tables*/
 table {
     table-layout: fixed;
     text-align: center;

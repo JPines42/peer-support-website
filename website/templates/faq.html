@@ -2,6 +2,7 @@
 {% block title %} FAQ • Peer Support SMC{% endblock %}
 {% block content %}
 
+<!--Heading-->
 <section>
   <div class="container px-4 px-lg-5 h-100 navspace">
     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -18,33 +19,34 @@
 
 <div class="spacer"></div>
 
+<!--Questions-->
 <section class="container">
   <div class="row">
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4"> <!--Question 1-->
       <h4 class="mb-3"><img src="static/assets/img/calendar.png" class="sizedown"> When does Peer Support start?</h4>
       <p>Peer Support takes place every Week B Late Start on Thursdays from 8:45-9:30.</p>
     </div>
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4"> <!--Question 2-->
       <h4 class="mb-3"><img src="static/assets/img/globe.png" class="sizedown"> Where does Peer Support happen?</h4>
       <p>Peer Support happens within the D Block classrooms as well as the surrounding area within SMC.</p>
     </div>
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4"> <!--Question 3-->
       <h4 class="mb-3"><img src="static/assets/img/hand.png" class="sizedown"> Who looks after the Year 7 and 8s?</h4>
       <p>The Peer Support Leaders will look after them until school starts. Please note that no teachers will be
         watching them.</p>
     </div>
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4"> <!--Question 4-->
       <h4 class="mb-3"><img src="static/assets/img/heart.png" class="sizedown"> What is expected to be done at Peer
         Support?</h4>
       <p>There will be a range of activities that the Peer Support Leaders could decide on for the juniors to engage in.
         E.g. Teamwork building, competitive exercises.</p>
     </div>
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4"> <!--Question 5-->
       <h4 class="mb-3"><img src="static/assets/img/music.png" class="sizedown"> Will there be a Sing-off or Dance-off
         this year?</h4>
       <p>Yes! In Term 3 the Peer Support competitions will be held in the Auditorium.</p>
     </div>
-    <div class="col-md-6 col-lg-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4"> <!--Question 6-->
       <h4 class="mb-3"><img src="static/assets/img/pen.png" class="sizedown"> What do you need to bring to Peer Support?
       </h4>
       <p>You won’t have to bring anything, as the Peer Support Leaders come prepared with everything needed for that
@@ -52,6 +54,7 @@
     </div>
 </section>
 
+<!--Contact Us-->
 <section class="container">
   <h2 class="text-center mt-0 headingsfont">Contact Us</h2>
   <hr class="divider" />
@@ -59,28 +62,20 @@
   <div>
     <form method="POST">
       <div class="form-group">
-        <label for="email" class="headingsfont">Email Address</label>
+        <label for="email" class="headingsfont">Email Address</label> <!--Email address input box-->
         <input type="email" class="form-control noteborder" id="email" name="email" placeholder="Enter email" />
       </div>
 
-      <label for="faq" class="headingsfont">Message</label>
+      <label for="faq" class="headingsfont">Message</label> <!--Message input box-->
       <textarea name="faq" id="faq" class="form-control noteborder" placeholder="Enter message here"></textarea>
 
       <div class="spacer"></div>
 
       <div align="center">
-        <button type="submit" class="btn btn-primary btn-lg buttoncolour headingsfont">Submit Message</button>
+        <button type="submit" class="btn btn-primary btn-lg buttoncolour headingsfont">Submit Message</button> <!--Sumbit button-->
       </div>
     </form>
 </section>
 <div class="spacer"></div>
 
-<script>
-  var activeNavItem = $('.nav-item');
-
-  activeNavItem.click(function () {
-    activeNavItem.removeClass('active');
-    $("#link-faq").addClass('active');
-  });
-</script>
 {% endblock %}

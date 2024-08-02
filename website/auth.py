@@ -7,7 +7,7 @@ from .forms import RegistrationForm
 
 auth = Blueprint("auth", __name__)
 
-
+#Login page route
 @auth.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -16,18 +16,18 @@ def login():
 
         user = User.query.filter_by(email=email).first()
         if user:
-            if check_password_hash(user.password, password):
+            if check_password_hash(user.password, password):  #Check if password is correct
                 flash('Logged in successsfully!', category='success')
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
             else:
                 flash('Incorrect password, try again.', category='error')
         else:
-            flash('Email does not exist.', category='error')
+            flash('Email does not exist.', category='error') #Check if email exists
 
     return render_template("login.html", user=current_user)
 
-
+#Signup page route
 @auth.route("/signup", methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
@@ -45,7 +45,7 @@ def signup():
         return redirect(url_for('views.home'))
     return render_template('signup.html', form=form, user=current_user)
 
-
+#Logout page route
 @auth.route("/logout")
 @login_required
 def logout():

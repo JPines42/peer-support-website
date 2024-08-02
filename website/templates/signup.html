@@ -2,6 +2,7 @@
 {% block title %} Sign Up • Peer Support SMC {% endblock %}
 {% block content %}
 
+<!--Heading-->
 <section>
     <div class="container px-4 px-lg-5 h-100 navspace">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -19,9 +20,9 @@
         <fieldset class="form-group">
 
             <div class="form-group">
-                {{ form.username.label(class="headingsfont form-control-label") }}
+                {{ form.username.label(class="headingsfont form-control-label") }} <!--Username input box-->
 
-                {% if form.username.errors %}
+                {% if form.username.errors %} <!--Username is invalid-->
                 {{ form.username(class="form-control is-invalid") }}
                 <div class="invalid-feedback">
                     {% for error in form.username.errors %}
@@ -34,9 +35,9 @@
             </div>
 
             <div class="form-group">
-                {{ form.email.label(class="headingsfont form-control-label") }}
+                {{ form.email.label(class="headingsfont form-control-label") }} <!--Email input box-->
 
-                {% if form.email.errors %}
+                {% if form.email.errors %} <!--Email is invalid-->
                 {{ form.email(class="form-control is-invalid") }}
                 <div class="invalid-feedback">
                     {% for error in form.email.errors %}
@@ -49,9 +50,9 @@
             </div>
 
             <div class="form-group">
-                {{ form.password.label(class="headingsfont form-control-label") }}
+                {{ form.password.label(class="headingsfont form-control-label") }} <!--Password input box-->
 
-                {% if form.password.errors %}
+                {% if form.password.errors %} <!--Password is invalid-->
                 {{ form.password(class="form-control is-invalid") }}
                 <div class="invalid-feedback">
                     {% for error in form.password.errors %}
@@ -64,9 +65,9 @@
             </div>
 
             <div class="form-group">
-                {{ form.confirm_password.label(class="headingsfont form-control-label") }}
+                {{ form.confirm_password.label(class="headingsfont form-control-label") }} <!--Confirm Password input box-->
 
-                {% if form.confirm_password.errors %}
+                {% if form.confirm_password.errors %} <!--Confirm Password is invalid-->
                 {{ form.confirm_password(class="form-control is-invalid") }}
                 <div class="invalid-feedback">
                     {% for error in form.confirm_password.errors %}
@@ -78,15 +79,10 @@
                 {% endif %}
             </div>
         </fieldset>
-        <div align="center" class="form-group">
-            {{ form.submit(class="btn btn-primary btn-lg buttoncolour headingsfont") }}
+        <div  class="form-group buttoncenter">
+            {{ form.submit(class="btn btn-primary btn-lg buttoncolour headingsfont") }} <!--Submit button-->
         </div>
     </form>
-
-    <hr class="divider" />
-    <small class="text-muted">
-        Already have an account?<a class="ml-2" href="{{ url_for('auth.login') }}">Sign in</a>
-    </small>
 
 </section>
 {% endblock %}

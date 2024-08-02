@@ -28,13 +28,16 @@ def faq():
     if request.method == 'POST':
         faq = request.form.get('faq')
         email = request.form.get('email')
-        if len(faq) < 1:
-            flash('Message is too short!', category='error')
+        if len(email) < 1:
+                flash('Email does not exist', category='error') #Flash error if message is less than 1 character
         else:
-            new_faq = Faq(data=faq, email=email)
-            db.session.add(new_faq)
-            db.session.commit()
-            flash('Message submitted!', category='success')
+            if len(faq) < 1:
+                flash('Message is too short!', category='error') #Flash error if message is less than 1 character
+            else:
+                new_faq = Faq(data=faq, email=email)
+                db.session.add(new_faq)
+                db.session.commit()
+                flash('Message submitted!', category='success') #Flash success if message is submitted
 
     return render_template("faq.html", user=current_user)
 
@@ -45,12 +48,12 @@ def notes():
     if request.method == 'POST':
         note = request.form.get('note')
         if len(note) < 1:
-            flash('Note is too short!', category='error')
+            flash('Note is too short!', category='error') #Flash error if note is less than 1 character
         else:
             new_note = Note(data=note, user_id=current_user.id)
             db.session.add(new_note)
             db.session.commit()
-            flash('Note added!', category='success')
+            flash('Note added!', category='success') #Flash success if note is submitted
 
     return render_template("notes.html", user=current_user)
 
@@ -64,7 +67,7 @@ def delete_note():
         if note.user_id == current_user.id:
             db.session.delete(note)
             db.session.commit()
-            flash('Note deleted!', category='success')
+            flash('Note deleted!', category='success') #Flash success if note is deleted
     return jsonify({})
 
 #Calendar page route
