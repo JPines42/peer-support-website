@@ -9,8 +9,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
-    background-size: cover; 
-  }
+    background-size: cover;
+}
 
 .spacer {
     padding: 1rem;
@@ -20,13 +20,13 @@ body {
     background-color: #DB2955;
 }
 
-a:not(.dropdown-item) { 
-    color: white; 
-} 
+a:not(.dropdown-item) {
+    color: white;
+}
 
-a:not(.dropdown-item):hover { 
-    color: #D4D4D4; 
-} 
+a:not(.dropdown-item):hover {
+    color: #D4D4D4;
+}
 
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -35,7 +35,7 @@ a:not(.dropdown-item):hover {
 
 .dropdown-item {
     margin-top: 0;
-    font-family:"Merriweather Sans", "Segoe UI";
+    font-family: "Merriweather Sans", "Segoe UI";
     font-weight: 500;
     line-height: 1;
     padding: 0.6rem;
@@ -70,7 +70,7 @@ a:not(.dropdown-item):hover {
     font-family: "Merriweather Sans", "Segoe UI";
     font-weight: 500;
     line-height: 1;
-  }
+}
 
 .headerpcolour {
     color: white;
@@ -100,7 +100,7 @@ a:not(.dropdown-item):hover {
 
 .flashspace {
     padding-top: 4.5rem;
-    position:fixed;
+    position: fixed;
     width: 47%;
     z-index: 5;
     right: 0%;
@@ -120,7 +120,7 @@ a:not(.dropdown-item):hover {
 }
 
 .homeheader {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../assets/img/banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/banner.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -134,9 +134,9 @@ a:not(.dropdown-item):hover {
 }
 
 .homeimgcircle img {
-  width: 14rem;
-  height: 14rem;
-  border: 0.3rem solid #DB2955;
+    width: 14rem;
+    height: 14rem;
+    border: 0.3rem solid #DB2955;
 }
 
 .video-container {
@@ -144,7 +144,7 @@ a:not(.dropdown-item):hover {
     padding-bottom: 56.25%;
     height: 0;
     width: 100%;
-  }
+}
 
 .video-container iframe {
     position: absolute;
@@ -161,14 +161,14 @@ a:not(.dropdown-item):hover {
     text-align: center;
 }
 
-table { 
-    table-layout:fixed;
+table {
+    table-layout: fixed;
     text-align: center;
 }
 
-td { 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
     word-wrap: break-word;
 }
 
@@ -183,7 +183,7 @@ td {
 
 .calendarhead {
     background-color: #DB2955;
-    color:white;
+    color: white;
     text-align: center;
     padding: 10px;
 }
@@ -196,7 +196,7 @@ td {
     background: #DB2955;
     color: white;
     font-weight: bold;
-  }
+}
 
 .listcenter {
     list-style-position: inside;

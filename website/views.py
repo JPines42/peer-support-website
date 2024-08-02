@@ -6,23 +6,23 @@ import json
 
 views = Blueprint("views", __name__)
 
-
+#Home page route
 @views.route("/")
 @views.route("/home")
 def home():
     return render_template("home.html", user=current_user)
 
-
+#Sing and Dance page route
 @views.route("/singdanceoff")
 def singdanceoff():
     return render_template("singdanceoff.html", user=current_user)
 
-
+#Meet the Leaders page route
 @views.route("/leaders")
 def leaders():
     return render_template("leaders.html", user=current_user)
 
-
+#FAQ page route
 @views.route("/faq", methods=['GET', 'POST'])
 def faq():
     if request.method == 'POST':
@@ -38,7 +38,7 @@ def faq():
 
     return render_template("faq.html", user=current_user)
 
-
+#Note page route
 @views.route("/notes", methods=['GET', 'POST'])
 @login_required
 def notes():
@@ -54,7 +54,7 @@ def notes():
 
     return render_template("notes.html", user=current_user)
 
-
+#Note deletion
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
     note = json.loads(request.data)
@@ -67,7 +67,7 @@ def delete_note():
             flash('Note deleted!', category='success')
     return jsonify({})
 
-
+#Calendar page route
 @views.route("/calendar")
 @login_required
 def calendar():
