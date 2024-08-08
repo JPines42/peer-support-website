@@ -1,6 +1,7 @@
+# Import module
 from website import create_app
 
-#App creation
+# App creation
 app = create_app()
 
 if __name__ == '__main__':

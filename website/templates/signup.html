@@ -14,6 +14,7 @@
     </div>
 </section>
 
+<!--Sign up input boxes-->
 <section class="container">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
@@ -30,7 +31,7 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.username(class="form-control noteborder", placeholder="Enter username (Must be greater than 1 character)") }}
+                {{ form.username(class="form-control noteborder", placeholder="Enter username (Must be greater than 1 character)") }} <!--Username passes validation-->
                 {% endif %}
             </div>
 
@@ -45,7 +46,7 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.email(class="form-control noteborder", placeholder="Enter email") }}
+                {{ form.email(class="form-control noteborder", placeholder="Enter email") }} <!--Email passes validation-->
                 {% endif %}
             </div>
 
@@ -60,7 +61,7 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.password(class="form-control noteborder", placeholder="Enter password (Must be greater than 7 characters)") }}
+                {{ form.password(class="form-control noteborder", placeholder="Enter password (Must be greater than 7 characters)") }} <!--Password passes validation-->
                 {% endif %}
             </div>
 
@@ -75,7 +76,7 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }}
+                {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }} <!--Confirmed password passes validation-->
                 {% endif %}
             </div>
         </fieldset>
